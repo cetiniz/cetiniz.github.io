@@ -8,6 +8,25 @@ module.exports = {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: ['babel-loader']
+      },
+      {
+        test: /\.css$/,
+        use: [{
+          loader: 'style-loader'
+        },
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true
+            }
+          }
+        ],
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/,
+        use: [
+          'file-loader'
+        ]
       }
     ]
   },
@@ -19,7 +38,7 @@ module.exports = {
     publicPath: '/',
     filename: 'bundle.js'
   },
-  plugins: [ 
+  plugins: [
     new webpack.HotModuleReplacementPlugin()
   ],
   devServer: {

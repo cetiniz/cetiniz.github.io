@@ -1,0 +1,26 @@
+{
+  "posts": [
+    {
+      "title":"Day 1",
+      "summary": "Today I learned about GitHub pages. Github pages, (what is currently powering this blog) is a service used to serve static content residing on a github repository. I was looking for an easy way of serving a static blog for this learning journal and stumbled across pages.",
+      "data": [
+        {
+          "type": "text",
+          "text": "Today I learned about GitHub pages. Github pages, (what is currently powering this blog) is a service used to serve static content residing on a github repository. I was looking for an easy way of serving a static blog for this learning journal and stumbled across pages."
+        },
+        {
+          "type": "text",
+          "text": "It was straightforward to setup: all you need to do is create a repository using yourusername.github.io and then create an index.html page in the root directory of the repository. However, I wanted to whip something up using react however so I bootstrapped a small React project using webpack+babel."
+        },
+        {
+          "type": "text",
+          "text": "The web content is served by default from your master branch. In order to keep things clean, I created another branch called development to house the react files. I built my bundle.js/index.html files to a dist directory. In order to deploy the site I used `git subtree` to build a sub-branch, (called _website_ ) inside of the dist folder and then I created a deploy script to push the website branch to master."
+        },
+        {
+          "type": "image",
+          "url": "./ghpages.png"
+        }
+      ]
+    }
+  ]
+}

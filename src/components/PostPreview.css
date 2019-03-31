@@ -1,0 +1,26 @@
+.container {
+    width: 450px;
+    height: 300px;
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.3);
+    padding: 16px;
+    position: relative;
+    margin-bottom: 48px;
+}
+.title {
+    margin-bottom: 16px;
+    font-weight: 600;
+    font-size: 16px;
+}
+.text {
+    font-size: 14px;
+}
+.readMore {
+    position: absolute;
+    bottom: 16px;
+    font-weight: 400;
+    font-size: 16px;
+}
+.readMore:hover {
+    color: grey;
+    cursor: pointer;
+}
