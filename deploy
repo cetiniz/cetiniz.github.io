@@ -1,1 +1,1 @@
-git push origin website:master --force
+git subtree push -P dist origin master
