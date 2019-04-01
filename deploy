@@ -1,4 +1,4 @@
 npx webpack
 git add .
 git cm -m 'Build dist'
-git subtree push -P dist origin master --force-with-lease
+git subtree push -P dist origin master
