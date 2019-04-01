@@ -1,6 +1,56 @@
 {
   "posts": [
     {
+      "title":"Day 2",
+      "summary": "Today I learned about UPC++, a distributed computing library for C++ made by Berkley University. The idea of UPC++ is based on partitioned global address spaces. In these spaces computer processors can directly name (by address) memory, and write to, memory inside another processors memory",
+      "data": [
+        {
+          "type": "text",
+          "text": "Today I learned about UPC++, a distributed computing library for C++ made by Berkley University. The idea of UPC++ is based on partitioned global address spaces. In these spaces computer processors can directly name (by address) memory, and write to, memory inside another processors memory. "
+        },
+        {
+          "type": "text",
+          "text": "In a typical system, two processors would communicate by sending messages where one process would send and another recieves. Using UPC++, a process can write directly to another processes memory using a remote data memory access operation (RDMA) (I think this is similar to direct memory access). A major advantage gained with this system is a reduction in overhead due to lack of a typical send/recieve pattern."
+        },
+        {
+          "type": "text",
+          "text": "To show an example, in UPC++, shared memory is allocated explicitly:"
+        },
+        {
+          "type": "code",
+          "code": "Global_ptr<int> gptr = upcxx::new_<int>(rank_me());"
+        },
+        {
+          "type": "text",
+          "text": "This line allocates a new global integer inside its processors memory which now can be accessed via other processors."
+        },
+        {
+          "type": "text",
+          "text": "Very similar to JavaScript, there is no implicit blocking in UPC++ allowing powerful asynchronous calls to global memory. As a result, you can pipeline computations with data accesses with the added benifit of RDMA."
+        },
+        {
+          "type": "text",
+          "text": "Asynchronous calls can be made as simple as using:"
+        },
+        {
+          "type": "code",
+          "code": "upcxx::future<T> f1 = upcxx::rget(gptr1);"
+        },
+        {
+          "type": "text",
+          "text": "To block until the data is available one only needs to call:"
+        },
+        {
+          "type": "code",
+          "code": "upcxx:wait(f1)"
+        },
+        {
+          "type": "text",
+          "text": "making the syntax easy and accessible."
+        }
+      ]
+    },
+    {
       "title":"Day 1",
       "summary": "Today I learned about GitHub pages. Github pages, (what is currently powering this blog) is a service used to serve static content residing on a github repository. I was looking for an easy way of serving a static blog for this learning journal and stumbled across pages.",
       "data": [
