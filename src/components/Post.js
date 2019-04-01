@@ -23,14 +23,22 @@ const Post = ({ postData, goBack }) => {
         )
     };
 
+    const renderCode = code => (
+        <div className={componentStyles.codeContainer}>
+            <code>{code}</code>
+        </div>
+    );
+
     const mapTypeToRender = content => {
         console.log(content)
-      switch (content.type) {
-          case 'text':
-              return renderText(content.text);
-          case 'image':
-              return renderImage(content.url);
-      }
+        switch (content.type) {
+            case 'text':
+                return renderText(content.text);
+            case 'image':
+                return renderImage(content.url);
+            case 'code':
+                return renderCode(content.code);
+        }
     };
 
     return (
