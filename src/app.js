@@ -37,7 +37,7 @@ class App extends Component {
 
   renderMainPage = () => (
       <div className={componentStyles.pageContainer}>
-        <h1 style={{ margin: '48px 0px' }}>365 Days of Learning</h1>
+        <h1 style={{ margin: '48px 0px', textAlign: 'center' }}>365 Days of Learning</h1>
         {posts.map(post => {
           return <PostPreview title={post.title} text={post.summary} readMore={() => this.handlePostSelection(post)} />;
         })}
