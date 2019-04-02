@@ -1,6 +1,40 @@
 {
   "posts": [
     {
+      "title":"Day 3",
+      "summary": "Today I learned about a new JavaScript design pattern called the Observer. The observer pattern is kind of like DOM event listeners in the sense that it is used to inform a set of listeners when a specific event happens. That being said, it differs in that any number of objects can subscribe to an ‘event’ and you can specify when the objects are informed that there has been an update.",
+      "data": [
+        {
+          "type": "text",
+          "text": "Today I learned about a new JavaScript design pattern called the Observer. The observer pattern is kind of like DOM event listeners in the sense that it is used to inform a set of listeners when a specific event happens. That being said, it differs in that any number of objects can subscribe to an ‘event’ and you can specify when the objects are informed that there has been an update."
+        },
+        {
+          "type": "text",
+          "text": "The observer design pattern consists of two components: the subject and the observers. An observer is an object that can subscribe to a subject, whos job is to maintain of list of observers and can notify them when nessessary."
+        },
+        {
+          "type": "text",
+          "text": "The implementation of the pattern is pretty easy. Observers are just objects that have a common ‘update’ function but the ‘update’ function is arbitrary and can be called whatever you like:"
+        },
+        {
+          "type": "code",
+          "code": "function Observer() {\nthis.update = function(upd) {\n…\n}\n}"
+        },
+        {
+          "type": "text",
+          "text": "The subject can be implemented as a list of observers with a function used to update all subscribed observers:"
+        },
+        {
+          "type": "code",
+          "code": "function Subject() {\nthis.observers = []\n\nthis.notify = function(upd) {\nfor (let obs of observers)\nobs.update(upd)\n}\n}"
+        },
+        {
+          "type": "text",
+          "text": "This is a bare minimum example but it wouldn't be hard to extend it to include more advanced functionality."
+        }
+      ]
+    },
+    {
       "title":"Day 2",
       "summary": "Today I learned about UPC++, a distributed computing library for C++ made by Berkley University. The idea of UPC++ is based on partitioned global address spaces. In these spaces computer processors can directly name (by address) memory, and write to, memory inside another processors memory",
       "data": [
