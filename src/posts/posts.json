@@ -1,6 +1,64 @@
 {
   "posts": [
     {
+      "title":"Day 4",
+      "summary": "Today I learned the basics of a LISP like language called Clojure. I was looking into RxJS, which is a library that uses a type of programming called 'Reactive Programming' (I will save that for another day), and I came across an article that talked about a language called clojure. ",
+      "data": [
+        {
+          "type": "text",
+          "text": "Today I learned the basics of a LISP like language called Clojure. I was looking into RxJS, which is a library that uses a type of programming called 'Reactive Programming' (I will save that for another day), and I came across an article that talked about a language called clojure. "
+        },
+        {
+          "type": "text",
+          "text": "LISP, short for LISt Processor, are a group of languages that seemingly do not have a clear definition. From my very brief experience, writing Clojure is like a mix of writing bash and JavaScript. The syntax is really easy and you can be productive almost from the get-go but the programming style is completely different from other OO languages such as Java/C++."
+        },
+        {
+          "type": "text",
+          "text": "A very straightforward example of the \"Hello World\" equivalent in lisp is:"
+        },
+        {
+          "type": "code",
+          "code": "(println Hello World)"
+        },
+        {
+          "type": "text",
+          "text": "All the magic in the line happens within parenthesizes: they are pivotal to Clojure. In clojure all programs can be written as (function argument). "
+        },
+        {
+          "type": "text",
+          "text": "Everything is evaluated instantly and the language emphasizes the use its RePL (read evaluate print loop: think developer tools console for JavaScript)."
+        },
+        {
+          "type": "text",
+          "text": "Clojure supports a variety of primitives like integers/floats, characters/strings, booleans, nils and it supports the collectives list, vector, set and map which all come with specific operations unique to them."
+        },
+        {
+          "type": "text",
+          "text": "I think the most interesting part of Clojure is that everything can be built via a series of (function argument) lines. There is something beautiful with the recursive like syntax that makes it feel like you're programming for the first time again."
+        },
+        {
+          "type": "text",
+          "text": "A more expressive example is shown below:"
+        },
+        {
+          "type": "code",
+          "code": "(defn make-thingy ([x] (fn [& args] x)))"
+        },
+        {
+          "type": "code",
+          "code": "((make-thingy 5) 8)"
+        },
+        {
+          "type": "text",
+          "text": "In this example, the defn keyword allows us to [def]ine a [f]u[n]ction called make-thingy which takes one parameter 'x' which returns another function in which we can do whatever we want and it returns the original argument. In order to call it we write the call syntax and supply it with an argument (make-thingy 5) and since it returns a function we need to supply that with another argument (which, in this case, is not used)."
+        },
+        {
+          "type": "text",
+          "text": "A great thing about Clojure is that there is also 'ClojureScript' which is basically Clojure that can be compiled to JavaScript. Moreover, you can easily use the React framework with ClojureScript making it an excellent front-end tool to make fault tolorant components. I plan on developing the rest of my blog using ClojureScript in order to further farmiliarize myself with the language."
+        }
+      ]
+    },
+    {
       "title":"Day 3",
       "summary": "Today I learned about a new JavaScript design pattern called the Observer. The observer pattern is kind of like DOM event listeners in the sense that it is used to inform a set of listeners when a specific event happens. That being said, it differs in that any number of objects can subscribe to an ‘event’ and you can specify when the objects are informed that there has been an update.",
       "data": [
