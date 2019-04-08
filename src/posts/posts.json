@@ -1,6 +1,52 @@
 {
   "posts": [
     {
+      "title":"Day 5",
+      "summary": "Today I learned about Reagent and reframe, two libraries that act as React wrappers for ClojureScript. Continuing from my previous Clojure experience, I was about to make a standard static website using React/Webpack etc but decided to try a ClojureScript implementation.",
+    "data": [
+      {
+        "type": "text",
+        "text": "Today I learned about Reagent and reframe, two libraries that act as React wrappers for ClojureScript. Continuing from my previous Clojure experience, I was about to make a standard static website using React/Webpack etc but decided to try a ClojureScript implementation."
+      },
+      {
+        "type": "text",
+        "text": "I started my new website by using a tool called leiningen, which is a project configurator that can be used for a variety of project types. I chose to create a re-frame project which is like a React project (it uses another ClojureScript library called Reagent) with Redux baked in."
+      },
+      {
+        "type": "text",
+        "text": "Writing the React components themselves was really easy, even easier than writing the JavaScript equivalent. A simple stateless react component can be composed as follows:"
+      },
+      {
+        "type": "code",
+        "code": "(defn work-panel []\n    [:div\n     [:div {:style {:display \"flex\" :flex-direction \"column\" :align-items \"center\"}}\n      [navbar]\n     ]]))"
+      },
+      {
+        "type": "text",
+        "text": "Inline styles can be applied easily with a style key and other react components can be easily added to existing components by surrounding the component name with square brackets like above with the 'navbar' component."
+      },
+      {
+        "type": "text",
+        "text": "I also wanted something like CSS-modules or a way of writing my styles in an organized fashion within ClojureScript. Luckily, there is an existing library that does just that called cljss or clojure style sheets."
+      },
+      {
+        "type": "text",
+        "text": "Shown in the code snippet below, using cljss, you can easily define css classes using the defstyles function and then evaluate them as the value of a class key inside a reagent DOM element (the example below is styling an input submit button)."
+      },
+      {
+        "type": "code",
+        "code": "(defstyles submitButton []\n           { :background-color \"#D8D8D8\"\n            :width \"355px\"\n            :height \"35px\"\n            :color \"white\"\n            :border \"none\"\n            })\n            \n[:input {:type \"submit\" :value \"Contact Me\" :class (submitButton)}]"
+      },
+      {
+        "type": "text",
+        "text": "Since everything in ClojureScript is function, far more advanced classes can be created to determine the styles parameters based off of parameters given to the style function (see example below)."
+      },
+      {
+        "type": "code",
+        "code": "(defstyles lastName [fontSize]\n  { :position \"absolute\"\n    :transform \"rotate(90deg)\"\n    :right \"0px\"\n    :bottom (str fontSize \"px\")\n    :width \"0px\"\n    :height (str(+ fontSize 60) \"px\")\n    :font-size (str fontSize \"px\")\n   })"
+      }
+      ]
+    },
+    {
       "title":"Day 4",
       "summary": "Today I learned the basics of a LISP like language called Clojure. I was looking into RxJS, which is a library that uses a type of programming called 'Reactive Programming' (I will save that for another day), and I came across an article that talked about a language called clojure. ",
       "data": [
