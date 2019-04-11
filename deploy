@@ -1,2 +1,5 @@
 npx webpack
+git add ./dist/*
+git cm -m 'Build dist'
 git subtree push -P dist origin master
+#git push origin website:master --force
