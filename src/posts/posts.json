@@ -1,6 +1,68 @@
 {
   "posts": [
     {
+      "title":"Day 6",
+      "summary": "Today I learned how to do basic JavaScript interlop in ClojureScript. Interlop is the ability to use/communicate with JavaScript while writing ClojureScript. Luckily for anyone that writes ClojureScript, they've made this task really easy.",
+      "data": [
+        {
+          "type": "text",
+          "text": "Today I learned how to do basic JavaScript interlop in ClojureScript. Interlop is the ability to use/communicate with JavaScript while writing ClojureScript. Luckily for anyone that writes ClojureScript, they've made this task really easy."
+        },
+        {
+          "type": "text",
+          "text": "To access JavaScript globals you can write:"
+        },
+        {
+          "type": "code",
+          "code": "(js/global_goes_here)"
+        },
+        {
+          "type": "text",
+          "text": "To set JavaScript variables its even easier:"
+        },
+        {
+          "type": "code",
+          "code": "(set! js/global_var_name value)"
+        },
+        {
+          "type": "text",
+          "text": "To access properties:"
+        },
+        {
+          "type": "code",
+          "code": "(.-property (js/global_var_name))"
+        },
+        {
+          "type": "text",
+          "text": "To fire methods:"
+        },
+        {
+          "type": "code",
+          "code": "(.property (js/global_var_name))"
+        },
+        {
+          "type": "text",
+          "text": "And finally, to create objects IN ClojureScript to be consumed by JS:"
+        },
+        {
+          "type": "code",
+          "code": "(js-obj \"property_name\" property_value)\n"
+        },
+        {
+          "type": "text",
+          "text": "My goal was to extend my current Reagent based ClojureScript project with an external JS library called ThreeJS. ThreeJS is a WebGL wrapper library used to generate simple 3D shapes but can also be used for more complicated endevours in WebGL."
+        },
+        {
+          "type": "text",
+          "text": "One big problem you have in ClojureScript when trying to use external libraries is that ClojureScript is fed through the google clojure compiler to optimize it. In doing so, you destroy variable names for space efficiency. Since this is an obvious problem for third party libraries, you need to make sure that your variable names remain untouched.\n"
+        },
+        {
+          "type": "text",
+          "text": "The easiest way to do this is to use cljsjs, which is a compilation of libraries that contain 'extern' files containing variable names which should not be touched making it easy to add your favourite JavaScript libraries to ClojureScript."
+        }
+      ]
+    },
+    {
       "title":"Day 5",
       "summary": "Today I learned about Reagent and reframe, two libraries that act as React wrappers for ClojureScript. Continuing from my previous Clojure experience, I was about to make a standard static website using React/Webpack etc but decided to try a ClojureScript implementation.",
     "data": [
