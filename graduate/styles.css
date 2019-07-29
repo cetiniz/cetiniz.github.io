@@ -1,1 +1,175 @@
-../../../EmployGraduates/styles.css
+body, html {
+    height: 100%;
+}
+p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+}
+.blank-button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+.boxPadding {
+    padding: 64px;
+}
+.marginLeft {
+    margin-left: 32px;
+}
+.infoText {
+    font-size: 18px;
+    line-height: 42px;
+}
+.row {
+    display: flex;
+}
+.align {
+    align-items: center;
+}
+.column {
+    display: flex;
+    flex-direction: column;
+}
+.boxScrollButton {
+    border: none; position: absolute; top: 8px; left: 50%; z-index: 5; background-color: transparent;
+}
+.img1 {
+    /* The image used */
+    background-image: url("./assets/Parallex1.jpg");
+
+    /* Set a specific height */
+    min-height: 100%;
+
+    /* Create the parallax scrolling effect */
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.img1-blur {
+    /* The image used */
+    background-image: url("./assets/EmployGrad_home1b.png");
+
+
+    /* Set a specific height */
+    min-height: 100%;
+    width: 100%;
+
+    /* Create the parallax scrolling effect */
+    position: absolute;
+    opacity: 0;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.img2 {
+    /* The image used */
+    background-image: url('./assets/EmployGrad_home2.png');
+
+    /* Set a specific height */
+    height: 680px;
+
+    position: relative;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.img2-blur {
+    /* The image used */
+    background-image: url('./assets/EmployGrad_home2b.png');
+
+    /* Set a specific height */
+    height: 680px;
+    width: 100%;
+
+    /* Create the parallax scrolling effect */
+    position: absolute;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.img3 {
+    /* The image used */
+    background-image: url('./assets/EmployGrad_home3.png');
+
+    /* Set a specific height */
+    height: 500px;
+
+    /* Create the parallax scrolling effect */
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.img3-blur {
+    /* The image used */
+    background-image: url('./assets/EmployGrad_home3b.png');
+
+    /* Set a specific height */
+    height: 500px;
+    width: 100%;
+
+    /* Create the parallax scrolling effect */
+    position: absolute;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.img4 {
+    /* The image used */
+    background-image: url('./assets/EmployGrad_home4.png');
+
+    /* Set a specific height */
+    height: 500px;
+
+    /* Create the parallax scrolling effect */
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.img4-blur {
+    /* The image used */
+    background-image: url('./assets/EmployGrad_home4b.png');
+
+    /* Set a specific height */
+    height: 500px;
+    width: 100%;
+
+    /* Create the parallax scrolling effect */
+    position: absolute;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.img5 {
+    /* The image used */
+    background-image: url('./assets/EmployGrad_home5.png');
+
+    /* Set a specific height */
+    height: 500px;
+
+    /* Create the parallax scrolling effect */
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* COLORS */
+.lightBlue {
+    color: #84c4e4;
+}
